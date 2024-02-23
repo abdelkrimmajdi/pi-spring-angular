@@ -13,7 +13,7 @@ public class Like {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long IdPost;
-    private  stateLike stateLike;
+    private  StateLike stateLike;
     @ManyToOne
     Post post;
 }
