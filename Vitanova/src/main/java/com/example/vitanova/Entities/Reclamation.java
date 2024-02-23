@@ -21,8 +21,8 @@ public class Reclamation {
     private String DescriptionReclam;
     @Enumerated(EnumType.STRING)
     private StateReclam stateReclam;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy="user")
-    private Set<Reclamation> Reclmations;
+    @ManyToOne
+    User user;
     @OneToMany(cascade = CascadeType.ALL, mappedBy="reclamation")
     private Set<Response> Responses;
 

@@ -36,7 +36,8 @@ public class User {
 
 
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy="user")
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
     private Set<Delivery> Deliverys;
     @ManyToMany(cascade = CascadeType.ALL)
     private Set<Room> rooms;
@@ -48,16 +49,16 @@ public class User {
     private Set<Subscription> Subscriptons;
     @ManyToMany(cascade = CascadeType.ALL)
     private Set<MentorProgram> mentorprograms;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy="user")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
     private Set<Journal> Journals;
-    @ManyToOne
-    User user;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy="user")
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
     private Set<Post> Posts;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy="user")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
     private Set<Physiotherapist> Physiotherapists;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy="user")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
     private Set<NutrisionistProgram> NutrisionistPrograms;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy="nutrisionistprogram")
-    private Set<Menu> Menus;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
+    private Set<Reclamation> Reclamations;
 }
